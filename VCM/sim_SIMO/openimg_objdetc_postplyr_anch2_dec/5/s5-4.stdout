@@ -1,0 +1,8 @@
+load model path: det_Openimage/point5_lambda4_194999.pth
+
+Evaluation of proposed methods for: X101
+Settings ID: 5
+VTM paramerters      : {'QP': 1, 'threads': 50}
+Feature dump subsample ratio: 9
+Loading pick5 ...
+pick5 Loaded

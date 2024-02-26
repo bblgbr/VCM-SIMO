@@ -1,0 +1,6 @@
+{"model_name": "x101",
+    "yaml_path": "configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml",
+    "pkl_path": "seg_Openimage/point6_lambda16_5999.pth",
+    "VTM" : {"QP" : 1, "threads": 50},
+    "pixel_num": 3751665408
+}    

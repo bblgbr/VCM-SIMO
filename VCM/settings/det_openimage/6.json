@@ -1,0 +1,6 @@
+{"model_name": "x101",
+    "yaml_path": "configs/COCO-Detection/faster_rcnn_X_101_32x8d_FPN_3x_vcm.yaml",
+    "pkl_path": "det_Openimage/point6_lambda16_04999.pth",
+    "VTM" : {"QP" : 1, "threads": 50},
+    "pixel_num": 3751665408
+}    

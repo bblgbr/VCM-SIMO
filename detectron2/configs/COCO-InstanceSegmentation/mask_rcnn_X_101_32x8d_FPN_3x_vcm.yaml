@@ -1,0 +1,29 @@
+_BASE_: "../Base-RCNN-FPN-VCM.yaml"
+MODEL:
+  MASK_ON: True
+  WEIGHTS: "/media/data/ccr/zzf/zzf_save/output/EXP_cheng2020anchor_256chinput_P2inP3out/model_0035999.pth" #要训练finenet时加载此预训练模型
+
+
+
+  PIXEL_STD: [57.375, 57.120, 58.395]
+  RESNETS:
+    STRIDE_IN_1X1: False  # this is a C2 model
+    NUM_GROUPS: 32
+    WIDTH_PER_GROUP: 8
+    DEPTH: 101
+
+OUTPUT_DIR: /media/data/ccr/zzf_save/output/EXP_cheng2020anchor_256chinput_P2inP3out_lambda1_iter35999_finenet
+
+
+SOLVER:
+  STEPS: (210000, 250000)
+  MAX_ITER: 270000
+  CHECKPOINT_PERIOD: 3000 #默认是5000
+  IMS_PER_BATCH: 2 #8 #1 #4 #6
+
+DATASETS:
+  TRAIN: ("openimg_mask_train",)
+  TEST: ()
+
+INPUT:
+  MIN_SIZE_TRAIN: (800, 800)

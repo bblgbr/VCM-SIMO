@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/bin/detection_openimage.py", line 39, in <module>
+    methods_eval = DetectEval(settings, set_idx, bpp_savepath)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/utils/eval_vivo_fast.py", line 287, in __init__
+    self.model, self.cfg = simo_utils.model_loader(settings)  # load模型进来
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/utils/simo_utils.py", line 27, in model_loader
+    model = DefaultPredictor(cfg).model
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/detectron2/detectron2/engine/defaults.py", line 282, in __init__
+    self.model = build_model(self.cfg)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/detectron2/detectron2/modeling/meta_arch/build.py", line 22, in build_model
+    model = META_ARCH_REGISTRY.get(meta_arch)(cfg)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/detectron2/detectron2/config/config.py", line 190, in wrapped
+    init_func(self, **explicit_args)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/detectron2/detectron2/modeling/meta_arch/rcnn.py", line 73, in __init__
+    self.net_belle = SIMO(N=192) # origin N=192
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/models/BUAA.py", line 42, in __init__
+    ResidualBlock(N, N),
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/CompressAI/compressai/layers/layers.py", line 170, in __init__
+    self.conv1 = conv3x3(in_ch, out_ch)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/CompressAI/compressai/layers/layers.py", line 83, in conv3x3
+    return nn.Conv2d(in_ch, out_ch, kernel_size=3, stride=stride, padding=1)
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 450, in __init__
+    super().__init__(
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 144, in __init__
+    self.reset_parameters()
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 150, in reset_parameters
+    init.kaiming_uniform_(self.weight, a=math.sqrt(5))
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/torch/nn/init.py", line 412, in kaiming_uniform_
+    return tensor.uniform_(-bound, bound)
+KeyboardInterrupt

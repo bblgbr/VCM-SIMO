@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/bin/detection_openimage.py", line 39, in <module>
+    methods_eval = DetectEval(settings, set_idx, bpp_savepath)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/utils/eval_vivo_fast.py", line 287, in __init__
+    self.model, self.cfg = simo_utils.model_loader(settings)  # load模型进来
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/utils/simo_utils.py", line 27, in model_loader
+    model = DefaultPredictor(cfg).model
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/detectron2/detectron2/engine/defaults.py", line 288, in __init__
+    checkpointer.load(cfg.MODEL.WEIGHTS)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/detectron2/detectron2/checkpoint/detection_checkpoint.py", line 62, in load
+    ret = super().load(path, *args, **kwargs)
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 155, in load
+    checkpoint = self._load_file(path)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/detectron2/detectron2/checkpoint/detection_checkpoint.py", line 99, in _load_file
+    loaded = self._torch_load(filename)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/detectron2/detectron2/checkpoint/detection_checkpoint.py", line 114, in _torch_load
+    return super()._load_file(f)
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/fvcore/common/checkpoint.py", line 252, in _load_file
+    return torch.load(f, map_location=torch.device("cpu"))
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/torch/serialization.py", line 809, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/torch/serialization.py", line 1172, in _load
+    result = unpickler.load()
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/torch/serialization.py", line 1142, in persistent_load
+    typed_storage = load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/mnt/ssd4/zzf/anaconda3/envs/SIMO-Segmentation-Openimage/lib/python3.8/site-packages/torch/serialization.py", line 1112, in load_tensor
+    storage = zip_file.get_storage_from_record(name, numel, torch.UntypedStorage)._typed_storage()._untyped_storage
+KeyboardInterrupt

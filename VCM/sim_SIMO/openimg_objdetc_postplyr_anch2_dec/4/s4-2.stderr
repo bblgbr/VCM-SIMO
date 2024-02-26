@@ -1,0 +1,10 @@
+
+Category ids in annotations are not in [1, #categories]! We'll apply a mapping for you.
+
+COCO Evaluator instantiated using config, this is deprecated behavior. Please pass in explicit arguments instead.
+Traceback (most recent call last):
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/bin/detection_openimage.py", line 50, in <module>
+    methods_eval.feature_decode(bin_paths)
+  File "/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/utils/eval_vivo_fast.py", line 453, in feature_decode
+    with open(coco_classes_fname, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/hdd0/zzf/VCM145th/SIMO-Segmentation-OpenimageV6/code/Openimg-Segmentation-Anchor-SIMO-propose/VCM/dataset/det_openimage/annotations_5k/coco_classes.txt'
